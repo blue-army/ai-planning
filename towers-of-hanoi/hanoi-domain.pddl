@@ -1,5 +1,6 @@
-(
-    define (domain hanoi)
+(define
+
+    (domain hanoi)
 
     (:requirements :typing :fluents :negative-preconditions)
 
