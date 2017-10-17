@@ -24,7 +24,7 @@
         (food ?shopper - shopper)
         (fun ?shopper - shopper))
 
-    (:action travel-to
+    (:action travel
          :parameters (?person - shopper ?from - location ?to - location)
 
          :precondition 
