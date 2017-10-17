@@ -1,5 +1,5 @@
-(
-    define (problem hanoi_3)
+(define 
+    (problem hanoi_3)
     
     (:domain hanoi)
     

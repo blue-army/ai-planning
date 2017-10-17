@@ -6,7 +6,7 @@
         {
             "taskName": "solve",
             "type": "shell",
-            "command": "java -jar ${workspaceFolder}/planner.jar $(ls ${fileDirname}/*domain*) ${file}",
+            "command": "java -DlogDir=${fileDirname}/logs -jar ${workspaceFolder}/planner.jar $(ls ${fileDirname}/*domain*) ${file}",
             "problemMatcher": [
             ]
         }
