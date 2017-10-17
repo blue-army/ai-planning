@@ -1,21 +1,28 @@
-(define (problem shop1)
- (:domain shopping)
- 
-(:objects 
-    goodchocolate rubbishchocolate hersheys cabbage
-    saurkraut rice quinoa gummyBears marshmallows book DVD game pizza - item
-    randalls costco aldi walgreens home - location
-    me - shopper)
+(define 
+    (problem shop1)
+    
+    (:domain shopping)
+    
+    (:objects 
+        goodchocolate rubbishchocolate hersheys cabbage
+        saurkraut rice quinoa gummyBears marshmallows book DVD game pizza - item
+        randalls costco aldi walgreens home - location
+        me - shopper)
 
-(:init (stored goodchocolate randalls) (stored rubbishchocolate aldi) (stored hersheys costco)
-        (stored saurkraut randalls) (stored cabbage aldi) (stored pizza costco)
-        (stored gummyBears walgreens) (stored rice costco) (stored quinoa randalls)
-        (stored DVD walgreens) (stored book costco) (stored pizza costco) (stored game walgreens)
-        
-        (at me home)
-        (= (cash me) 100)
-        (= (fun me) 0)
-        (= (food me) 0)
+    (:init 
+        (stored goodchocolate randalls) 
+        (stored rubbishchocolate aldi) 
+        (stored hersheys costco)
+        (stored saurkraut randalls) 
+        (stored cabbage aldi) 
+        (stored pizza costco)
+        (stored gummyBears walgreens)
+        (stored rice costco)
+        (stored quinoa randalls)
+        (stored DVD walgreens)
+        (stored book costco)
+        (stored pizza costco)
+        (stored game walgreens)
         
         (= (entertainmentValue goodchocolate) 10)
         (= (entertainmentValue rubbishchocolate) 5)
@@ -73,14 +80,24 @@
         (= (travelCost randalls costco) 6)
         (= (travelCost costco aldi) 8)
         (= (travelCost aldi costco) 8)
-        
         (= (travelCost walgreens randalls) 6)
         (= (travelCost randalls walgreens) 6)
         (= (travelCost walgreens aldi) 9)
         (= (travelCost aldi walgreens) 9)
-        
         (= (travelcost randalls aldi) 10)
         (= (travelcost aldi randalls) 10)
-)
 
-(:goal (and (>= (food me) 30) (>= (fun me) 40) (at me home))))
+        (at me home)
+        (= (cash me) 100)
+        (= (fun me) 0)
+        (= (food me) 0)
+    )
+
+    (:goal 
+        (and 
+            (>= (food me) 30) 
+            (>= (fun me) 10) 
+            (at me home)
+        )
+    )
+)
