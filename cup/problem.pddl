@@ -6,14 +6,14 @@
                 kitchen - room 
                 living-room - room)
 (:init 
-	(ontable cup-of-tea kitchen) 
-	(handempty) 
-	(in kitchen) 
-	(inperson grandpa living-room)
+    (ontable cup-of-tea kitchen) 
+    (handempty) 
+    (in kitchen) 
+    (inperson grandpa living-room)
 )
 
 (:goal
-	(and 
+    (and 
         (delivered cup-of-tea grandpa)
     )
 ))
