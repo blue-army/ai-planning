@@ -4,9 +4,21 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "solve",
+            "taskName": "jsolve",
             "type": "shell",
             "command": "java -DlogDir=${fileDirname}/logs -jar ${workspaceFolder}/planner.jar $(ls ${fileDirname}/*domain*) ${file}",
+            "problemMatcher": [
+            ]
+        },
+        {
+            "taskName": "psolve",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "popex",
+                "$(dir -name *domain*)",
+                "${file}"
+            ],
             "problemMatcher": [
             ]
         }
